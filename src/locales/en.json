@@ -1,0 +1,382 @@
+{
+  "app": {
+    "title": "The Brain",
+    "description": "Discover which part of your brain takes the wheel in everyday situations. A short interactive quiz about your reptilian brain, limbic system, and neocortex."
+  },
+  "nav": {
+    "languageSwitcher": "Language"
+  },
+  "landing": {
+    "title": "Brain Driver",
+    "subtitle": "Who's really in charge up there?",
+    "description": "Your brain has three major systems — each one evolved at a different time and handles different jobs. Take this quick quiz to discover which driver is behind the wheel in everyday situations.",
+    "cta": "Start the Journey"
+  },
+  "stage2Intro": {
+    "question": "Can you tell which part of the brain is in charge — and which one is being controlled?",
+    "cta": "Next"
+  },
+  "scrolly": {
+    "screen1": {
+      "title": "A Simplified Model of the Brain",
+      "body": "Scientists often describe the brain using a three-part model. It's simplified, but it helps us understand the very different ways we react to the world."
+    },
+    "screen2": {
+      "title": "The Reptilian Brain",
+      "body": "The oldest part of the brain. It handles survival instincts: fight, flight, freeze. It's fast, automatic, and doesn't ask for permission — it just reacts."
+    },
+    "screen3": {
+      "title": "The Limbic System",
+      "body": "Evolved in early mammals. It's the seat of emotions, memory, and social bonding. When you feel joy, fear, or loyalty — that's your limbic system talking."
+    },
+    "screen4": {
+      "title": "The Neocortex",
+      "body": "The newest addition, unique to higher mammals. It handles logic, language, planning, and abstract thought. It's why you can do math, write poetry, and pay taxes."
+    },
+    "screen5": {
+      "title": "Ready to Test Yourself?",
+      "body": "Can you recognize which part of the brain is in charge in a given situation? Let's find out."
+    },
+    "continue": "Continue",
+    "startQuiz": "Start the Quiz"
+  },
+  "quiz": {
+    "progressLabel": "Question {current} / {total}",
+    "questionMain": "What part of the brain is the main one (responsible) here?",
+    "questionQ1": "Who is in charge and sending the signal?",
+    "questionQ2": "Who is being controlled?",
+    "options": {
+      "reptilian": "Reptilian Brain",
+      "limbic": "Limbic System",
+      "neocortex": "Neocortex"
+    },
+    "next": "Next",
+    "submit": "See Results",
+    "correct": "Correct!",
+    "incorrect": "Not quite.",
+    "explanation": "Why:"
+  },
+  "results": {
+    "title": "Your Results",
+    "scoreLabel": "Score: {correct} / {total}",
+    "breakdownTitle": "Breakdown by System",
+    "reptilian": "Reptilian Brain",
+    "limbic": "Limbic System",
+    "neocortex": "Neocortex",
+    "topDriver": "Your Top Brain Driver: {system}",
+    "shareResults": "Share Results",
+    "goDeeper": "Go Deeper",
+    "tryAgain": "Try Again",
+    "downloadImage": "Download Image",
+    "shareTitle": "My Brain Driver Results",
+    "shareText": "I scored {correct}/{total} on the Brain Driver quiz! My top brain driver is {system}.",
+    "correctLabel": "{count} correct"
+  },
+  "footer": {
+    "sfx": "SFX",
+    "music": "Music",
+    "voice": "Voice",
+    "on": "On",
+    "off": "Off",
+    "myX": "X / Twitter",
+    "myWebsite": "Website",
+    "emailMe": "Email me"
+  },
+  "situationsMain": {
+    "main1": {
+      "title": "Hot Surface",
+      "description": "You pulled your hand away from a hot surface before you even realized it was hot.",
+      "why": "The reptilian brain executes reflex actions to protect the body.",
+      "correctMain": "reptilian"
+    },
+    "main2": {
+      "title": "Loud Sudden Sound",
+      "description": "Your heart started beating faster when you heard a sharp, loud sound.",
+      "why": "The limbic system reacts to startling stimuli and triggers emotional and bodily responses.",
+      "correctMain": "limbic"
+    },
+    "main3": {
+      "title": "Tax Declaration",
+      "description": "You are filling out your tax return and checking the numbers.",
+      "why": "The neocortex handles logic, numbers, and planning.",
+      "correctMain": "neocortex"
+    },
+    "main4": {
+      "title": "Car Stops Ahead",
+      "description": "You automatically hit the brakes when you see the car in front of you stop suddenly.",
+      "why": "The reptilian brain triggers fast, automatic reactions to avoid danger.",
+      "correctMain": "reptilian"
+    },
+    "main5": {
+      "title": "Nervous Before a Speech",
+      "description": "You feel nervous before an important presentation or performance.",
+      "why": "The limbic system processes emotions like anxiety and anticipation.",
+      "correctMain": "limbic"
+    },
+    "main6": {
+      "title": "Planning a Trip",
+      "description": "You are planning a trip with connections and layovers.",
+      "why": "The neocortex is responsible for planning and abstract reasoning.",
+      "correctMain": "neocortex"
+    },
+    "main7": {
+      "title": "Something Flew Past Your Face",
+      "description": "You blinked when something suddenly flew past your face.",
+      "why": "The reptilian brain triggers protective reflexes before you can think.",
+      "correctMain": "reptilian"
+    },
+    "main8": {
+      "title": "Awkward After a Joke",
+      "description": "You felt awkward after a joke that fell flat.",
+      "why": "The limbic system processes social emotions like embarrassment.",
+      "correctMain": "limbic"
+    },
+    "main9": {
+      "title": "Comparing Job Offers",
+      "description": "You are comparing two job offers and choosing the better one.",
+      "why": "The neocortex handles comparison, analysis, and decision-making.",
+      "correctMain": "neocortex"
+    },
+    "main10": {
+      "title": "Footsteps Behind You at Night",
+      "description": "You turned around sharply when you heard footsteps behind you at night.",
+      "why": "The reptilian brain triggers the fight-or-flight response to perceived threat.",
+      "correctMain": "reptilian"
+    },
+    "main11": {
+      "title": "Jealousy",
+      "description": "You felt jealous when you saw your partner with someone else.",
+      "why": "The limbic system processes emotions like jealousy and attachment.",
+      "correctMain": "limbic"
+    },
+    "main12": {
+      "title": "Saving for a Purchase",
+      "description": "You are calculating how many months you need to save for a purchase.",
+      "why": "The neocortex handles logic, numbers, and planning.",
+      "correctMain": "neocortex"
+    },
+    "main13": {
+      "title": "Stepped on Something Sharp",
+      "description": "You automatically pulled your foot away when you stepped on something sharp.",
+      "why": "The reptilian brain executes reflex actions to protect the body.",
+      "correctMain": "reptilian"
+    },
+    "main14": {
+      "title": "Smiling at a Loved One",
+      "description": "You smiled when you saw someone close to you.",
+      "why": "The limbic system drives emotional and social bonding responses.",
+      "correctMain": "limbic"
+    },
+    "main15": {
+      "title": "Reading a Complex Contract",
+      "description": "You are reading a complex contract and trying to understand it.",
+      "why": "The neocortex handles language, logic, and abstract reasoning.",
+      "correctMain": "neocortex"
+    },
+    "main16": {
+      "title": "Door Slam",
+      "description": "You flinched at the sound of a door suddenly slamming.",
+      "why": "The reptilian brain reacts to sudden, startling stimuli with a reflex.",
+      "correctMain": "reptilian"
+    },
+    "main17": {
+      "title": "Shame About the Past",
+      "description": "You feel shame when you remember a situation from the past.",
+      "why": "The limbic system links memory to emotions like shame.",
+      "correctMain": "limbic"
+    },
+    "main18": {
+      "title": "Investment Chart",
+      "description": "You are studying an investment chart before making a decision.",
+      "why": "The neocortex is responsible for analysis and rational decision-making.",
+      "correctMain": "neocortex"
+    },
+    "main19": {
+      "title": "Slipped",
+      "description": "You automatically kept your balance when you slipped.",
+      "why": "The reptilian brain coordinates automatic balance and motor responses.",
+      "correctMain": "reptilian"
+    },
+    "main20": {
+      "title": "Worry About Others' Opinion",
+      "description": "You worry about what others think of you.",
+      "why": "The limbic system processes social anxiety and concern about others' views.",
+      "correctMain": "limbic"
+    },
+    "what1": {
+      "title": "Solving a Puzzle",
+      "description": "You are working through a logic puzzle step by step.",
+      "why": "The neocortex handles reasoning and step-by-step analysis.",
+      "correctMain": "neocortex"
+    },
+    "what2": {
+      "title": "Reflex to a Loud Bang",
+      "description": "You jumped when you heard a loud bang nearby.",
+      "why": "The reptilian brain triggers an immediate startle response to sudden threat.",
+      "correctMain": "reptilian"
+    },
+    "what3": {
+      "title": "Feeling Moved by a Song",
+      "description": "A song brought back a memory and you felt emotional.",
+      "why": "The limbic system links memory and emotion.",
+      "correctMain": "limbic"
+    },
+    "what4": {
+      "title": "Unexpected Touch",
+      "description": "Someone touched your shoulder from behind and you reacted before turning.",
+      "why": "One of the three brain systems is primarily responsible for this response."
+    },
+    "what5": {
+      "title": "Choosing What to Eat",
+      "description": "You stood in front of the fridge deciding what to eat.",
+      "why": "One of the three brain systems is primarily responsible for this response."
+    },
+    "what6": {
+      "title": "Reacting to a Compliment",
+      "description": "You felt a rush of pleasure when someone praised your work.",
+      "why": "One of the three brain systems is primarily responsible for this response."
+    }
+  },
+  "situations": {
+    "ctrl1": {
+      "title": "Footsteps at Night",
+      "description": "You're walking down an empty street at night. Suddenly you hear fast footsteps behind you. Your body tenses, your heart speeds up. A few seconds later you turn around and realize it's just someone rushing for the bus, and you gradually calm down.",
+      "why": "The neocortex reassessed the situation and then calmed the limbic system.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl2": {
+      "title": "Before a Big Presentation",
+      "description": "Before an important presentation your palms sweat and your pulse quickens. You notice this and start breathing slowly and deeply, focusing on counting your breaths. Gradually your body returns to normal.",
+      "why": "The neocortex used conscious breathing to regulate the reptilian stress response.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "reptilian"
+    },
+    "ctrl3": {
+      "title": "Aggressive Comment Online",
+      "description": "You're reading an aggressive comment online. Anger rises inside, you want to reply sharply right away. But you close the tab and decide to come back to it later.",
+      "why": "The neocortex overrode the limbic impulse to react and chose to step back.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl4": {
+      "title": "Branch Cracked in the Forest",
+      "description": "A branch cracked sharply near you in the forest. You freeze instantly. A second later anxiety appears and you start imagining it could be danger.",
+      "why": "The reptilian brain triggered the freeze response first; then the limbic system added fear.",
+      "correctAnswerQ1": "reptilian",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl5": {
+      "title": "Anger During an Argument",
+      "description": "You're very angry during an argument and at some point you notice you're no longer listening to the arguments and can't form your thoughts clearly.",
+      "why": "The limbic system was in charge and overwhelmed the neocortex's ability to reason.",
+      "correctAnswerQ1": "limbic",
+      "correctAnswerQ2": "neocortex"
+    },
+    "ctrl6": {
+      "title": "Before a Blood Test",
+      "description": "Before a blood test you feel anxious and your breathing gets uneven. You consciously start reminding yourself that it's a safe procedure and will be over quickly.",
+      "why": "The neocortex used rational reassurance to calm the limbic system.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl7": {
+      "title": "Car Horn",
+      "description": "You heard a sharp car horn. Your body jerked, and a moment later you feel a wave of irritation and start mentally cursing the driver.",
+      "why": "The reptilian brain triggered the startle first; then the limbic system added irritation.",
+      "correctAnswerQ1": "reptilian",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl8": {
+      "title": "Fear of Flying",
+      "description": "You're gripped by fear of flying. Already on the plane you start reading flight safety statistics to calm yourself down.",
+      "why": "The neocortex used facts to regulate the limbic fear response.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl9": {
+      "title": "Nervous Before a Meeting",
+      "description": "You feel very nervous before a meeting. Because of that your stomach starts to hurt and your muscles tense.",
+      "why": "The limbic system drove the emotional state and affected the reptilian body response.",
+      "correctAnswerQ1": "limbic",
+      "correctAnswerQ2": "reptilian"
+    },
+    "ctrl10": {
+      "title": "Strange Sound at Night",
+      "description": "You woke at night to a strange sound. Your body is already tense. A few seconds later you start logically going through possible causes of the noise.",
+      "why": "The reptilian brain reacted first; then the neocortex took over to analyze.",
+      "correctAnswerQ1": "reptilian",
+      "correctAnswerQ2": "neocortex"
+    },
+    "ctrl11": {
+      "title": "Hurt in a Conversation",
+      "description": "Something in the conversation stung you. You feel hurt rising inside and start talking faster and sharper, not choosing your words.",
+      "why": "The limbic system took over and disrupted the neocortex's control over speech.",
+      "correctAnswerQ1": "limbic",
+      "correctAnswerQ2": "neocortex"
+    },
+    "ctrl12": {
+      "title": "Shallow Breathing from Stress",
+      "description": "You notice you're breathing shallowly because of stress. You consciously even out your breathing and relax your shoulders.",
+      "why": "The neocortex used deliberate regulation to calm the reptilian stress response.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "reptilian"
+    },
+    "ctrl13": {
+      "title": "Walking by a Cliff",
+      "description": "You're walking along the edge of a cliff. Your body automatically slows down and becomes very cautious. From that comes an anxious feeling of danger.",
+      "why": "The reptilian brain triggered caution first; then the limbic system added anxiety.",
+      "correctAnswerQ1": "reptilian",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl14": {
+      "title": "Overwhelmed After News",
+      "description": "You're overwhelmed with emotions after some news. You sit down and start writing your thoughts to get yourself in order.",
+      "why": "The neocortex used writing to regulate and organize the limbic emotional state.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl15": {
+      "title": "During a Conflict",
+      "description": "During a conflict you feel your face 'burning' and your heart beating harder, and it becomes hard to reason calmly.",
+      "why": "The limbic system was in charge and made it difficult for the neocortex to think clearly.",
+      "correctAnswerQ1": "limbic",
+      "correctAnswerQ2": "neocortex"
+    },
+    "ctrl16": {
+      "title": "Before an Exam",
+      "description": "Before an exam you imagine the worst scenario, and because of that your body starts reacting as if to a real threat.",
+      "why": "The neocortex (imagining the scenario) triggered the limbic and bodily stress response.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl17": {
+      "title": "Slipped Suddenly",
+      "description": "You slipped suddenly. Your body instantly corrects balance, and only then does the fright set in.",
+      "why": "The reptilian brain handled balance first; then the limbic system produced the fear.",
+      "correctAnswerQ1": "reptilian",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl18": {
+      "title": "Feeling Panic",
+      "description": "You feel panic, but you deliberately start counting objects around you to regain control.",
+      "why": "The neocortex used a focusing technique to calm the limbic panic.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl19": {
+      "title": "After an Unpleasant Email",
+      "description": "After an unpleasant email you feel tension in your body and your heart beating faster.",
+      "why": "The limbic system processed the upset and drove the reptilian bodily response.",
+      "correctAnswerQ1": "limbic",
+      "correctAnswerQ2": "reptilian"
+    },
+    "ctrl20": {
+      "title": "Wanting to Snap Back",
+      "description": "You really want to snap at someone, but you make yourself pause and choose your words.",
+      "why": "The neocortex overrode the limbic impulse and chose a measured response.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "limbic"
+    }
+  }
+}

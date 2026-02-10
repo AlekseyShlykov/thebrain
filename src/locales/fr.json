@@ -1,0 +1,382 @@
+{
+  "app": {
+    "title": "Brain Driver",
+    "description": "Découvrez quelle partie de votre cerveau prend le volant dans les situations quotidiennes. Un court quiz interactif sur le cerveau reptilien, le système limbique et le néocortex."
+  },
+  "nav": {
+    "languageSwitcher": "Langue"
+  },
+  "landing": {
+    "title": "Brain Driver",
+    "subtitle": "Qui commande vraiment là-haut ?",
+    "description": "Votre cerveau possède trois systèmes majeurs — chacun a évolué à une époque différente et gère des tâches différentes. Faites ce quiz rapide pour découvrir quel pilote est au volant dans les situations du quotidien.",
+    "cta": "Commencer le voyage"
+  },
+  "stage2Intro": {
+    "question": "Saurez-vous dire quelle partie du cerveau commande — et laquelle est contrôlée ?",
+    "cta": "Suivant"
+  },
+  "scrolly": {
+    "screen1": {
+      "title": "Un modèle simplifié du cerveau",
+      "body": "Les scientifiques décrivent souvent le cerveau en trois parties. C'est simplifié, mais cela nous aide à comprendre les façons très différentes dont nous réagissons au monde."
+    },
+    "screen2": {
+      "title": "Le cerveau reptilien",
+      "body": "La partie la plus ancienne du cerveau. Elle gère les instincts de survie : combat, fuite, gel. C'est rapide, automatique, et ne demande pas la permission — elle réagit, tout simplement."
+    },
+    "screen3": {
+      "title": "Le système limbique",
+      "body": "Apparu chez les premiers mammifères. C'est le siège des émotions, de la mémoire et des liens sociaux. Quand vous ressentez de la joie, de la peur ou de la loyauté — c'est votre système limbique qui parle."
+    },
+    "screen4": {
+      "title": "Le néocortex",
+      "body": "Le dernier ajout, unique aux mammifères supérieurs. Il gère la logique, le langage, la planification et la pensée abstraite. C'est grâce à lui que vous pouvez faire des maths, écrire de la poésie et payer vos impôts."
+    },
+    "screen5": {
+      "title": "Prêt à vous tester ?",
+      "body": "Pouvez-vous reconnaître quelle partie du cerveau est aux commandes dans une situation donnée ? Voyons ça."
+    },
+    "continue": "Continuer",
+    "startQuiz": "Commencer le quiz"
+  },
+  "quiz": {
+    "progressLabel": "Question {current} / {total}",
+    "questionMain": "Quelle partie du cerveau est la principale (responsable) ici ?",
+    "questionQ1": "Qui est aux commandes et envoie le signal ?",
+    "questionQ2": "Qui est contrôlé ?",
+    "options": {
+      "reptilian": "Cerveau reptilien",
+      "limbic": "Système limbique",
+      "neocortex": "Néocortex"
+    },
+    "next": "Suivant",
+    "submit": "Voir les résultats",
+    "correct": "Correct !",
+    "incorrect": "Pas tout à fait.",
+    "explanation": "Pourquoi :"
+  },
+  "results": {
+    "title": "Vos résultats",
+    "scoreLabel": "Score : {correct} / {total}",
+    "breakdownTitle": "Répartition par système",
+    "reptilian": "Cerveau reptilien",
+    "limbic": "Système limbique",
+    "neocortex": "Néocortex",
+    "topDriver": "Votre pilote cérébral principal : {system}",
+    "shareResults": "Partager les résultats",
+    "goDeeper": "Aller plus loin",
+    "tryAgain": "Réessayer",
+    "downloadImage": "Télécharger l'image",
+    "shareTitle": "Mes résultats Brain Driver",
+    "shareText": "J'ai obtenu {correct}/{total} au quiz Brain Driver ! Mon pilote cérébral principal est {system}.",
+    "correctLabel": "{count} correct(s)"
+  },
+  "footer": {
+    "sfx": "SFX",
+    "music": "Musique",
+    "voice": "Voix",
+    "on": "Activé",
+    "off": "Désactivé",
+    "myX": "X / Twitter",
+    "myWebsite": "Site web",
+    "emailMe": "Écrivez-moi"
+  },
+  "situationsMain": {
+    "main1": {
+      "title": "Surface chaude",
+      "description": "Tu as retiré ta main d'une surface chaude avant même de réaliser qu'elle était chaude.",
+      "why": "Le cerveau reptilien exécute des actions réflexes pour protéger le corps.",
+      "correctMain": "reptilian"
+    },
+    "main2": {
+      "title": "Bruit soudain et fort",
+      "description": "Ton cœur s'est mis à battre plus vite quand tu as entendu un bruit soudain et strident.",
+      "why": "Le système limbique réagit aux stimuli surprenants et déclenche des réponses émotionnelles et corporelles.",
+      "correctMain": "limbic"
+    },
+    "main3": {
+      "title": "Déclaration d'impôts",
+      "description": "Tu remplis ta déclaration d'impôts et tu vérifies les chiffres.",
+      "why": "Le néocortex gère la logique, les chiffres et la planification.",
+      "correctMain": "neocortex"
+    },
+    "main4": {
+      "title": "La voiture s'arrête devant toi",
+      "description": "Tu freines automatiquement en voyant la voiture devant toi s'arrêter brusquement.",
+      "why": "Le cerveau reptilien déclenche des réactions rapides et automatiques pour éviter le danger.",
+      "correctMain": "reptilian"
+    },
+    "main5": {
+      "title": "Nerveux avant une présentation",
+      "description": "Tu te sens nerveux avant une présentation ou une performance importante.",
+      "why": "Le système limbique traite les émotions comme l'anxiété et l'anticipation.",
+      "correctMain": "limbic"
+    },
+    "main6": {
+      "title": "Planifier un voyage",
+      "description": "Tu planifies un voyage avec des correspondances.",
+      "why": "Le néocortex est responsable de la planification et du raisonnement abstrait.",
+      "correctMain": "neocortex"
+    },
+    "main7": {
+      "title": "Quelque chose a volé près de ton visage",
+      "description": "Tu as cligné des yeux quand quelque chose a soudainement volé près de ton visage.",
+      "why": "Le cerveau reptilien déclenche des réflexes de protection avant que tu puisses réfléchir.",
+      "correctMain": "reptilian"
+    },
+    "main8": {
+      "title": "Gêné après une blague",
+      "description": "Tu t'es senti gêné après une blague qui n'a pas marché.",
+      "why": "Le système limbique traite les émotions sociales comme la gêne.",
+      "correctMain": "limbic"
+    },
+    "main9": {
+      "title": "Comparer des offres d'emploi",
+      "description": "Tu compares deux offres d'emploi et tu choisis la meilleure.",
+      "why": "Le néocortex gère la comparaison, l'analyse et la prise de décision.",
+      "correctMain": "neocortex"
+    },
+    "main10": {
+      "title": "Des pas derrière toi la nuit",
+      "description": "Tu t'es retourné brusquement en entendant des pas derrière toi la nuit.",
+      "why": "Le cerveau reptilien déclenche la réponse combat-fuite face à une menace perçue.",
+      "correctMain": "reptilian"
+    },
+    "main11": {
+      "title": "Jalousie",
+      "description": "Tu as ressenti de la jalousie en voyant ton partenaire avec quelqu'un d'autre.",
+      "why": "Le système limbique traite les émotions comme la jalousie et l'attachement.",
+      "correctMain": "limbic"
+    },
+    "main12": {
+      "title": "Épargner pour un achat",
+      "description": "Tu calcules combien de mois tu dois épargner pour un achat.",
+      "why": "Le néocortex gère la logique, les chiffres et la planification.",
+      "correctMain": "neocortex"
+    },
+    "main13": {
+      "title": "Marche sur quelque chose de pointu",
+      "description": "Tu as automatiquement retiré ton pied en marchant sur quelque chose de pointu.",
+      "why": "Le cerveau reptilien exécute des actions réflexes pour protéger le corps.",
+      "correctMain": "reptilian"
+    },
+    "main14": {
+      "title": "Sourire à un proche",
+      "description": "Tu as souri en voyant une personne qui te est chère.",
+      "why": "Le système limbique stimule les réponses émotionnelles et d'attachement social.",
+      "correctMain": "limbic"
+    },
+    "main15": {
+      "title": "Lire un contrat complexe",
+      "description": "Tu lis un contrat complexe et tu essaies de le comprendre.",
+      "why": "Le néocortex gère le langage, la logique et le raisonnement abstrait.",
+      "correctMain": "neocortex"
+    },
+    "main16": {
+      "title": "Porte qui claque",
+      "description": "Tu as sursauté au bruit d'une porte qui claque soudainement.",
+      "why": "Le cerveau reptilien réagit aux stimuli soudains par un réflexe de protection.",
+      "correctMain": "reptilian"
+    },
+    "main17": {
+      "title": "Honte du passé",
+      "description": "Tu ressens de la honte en te souvenant d'une situation passée.",
+      "why": "Le système limbique relie la mémoire aux émotions comme la honte.",
+      "correctMain": "limbic"
+    },
+    "main18": {
+      "title": "Graphique d'investissement",
+      "description": "Tu étudies un graphique d'investissement avant de prendre une décision.",
+      "why": "Le néocortex est responsable de l'analyse et de la prise de décision rationnelle.",
+      "correctMain": "neocortex"
+    },
+    "main19": {
+      "title": "Tu as glissé",
+      "description": "Tu as automatiquement gardé l'équilibre en glissant.",
+      "why": "Le cerveau reptilien coordonne les réponses automatiques d'équilibre et motrices.",
+      "correctMain": "reptilian"
+    },
+    "main20": {
+      "title": "S'inquiéter de l'opinion des autres",
+      "description": "Tu t'inquiètes de ce que les autres pensent de toi.",
+      "why": "Le système limbique traite l'anxiété sociale et le souci du regard des autres.",
+      "correctMain": "limbic"
+    },
+    "what1": {
+      "title": "Résoudre un puzzle",
+      "description": "Tu travailles sur un puzzle logique étape par étape.",
+      "why": "Le néocortex gère le raisonnement et l'analyse pas à pas.",
+      "correctMain": "neocortex"
+    },
+    "what2": {
+      "title": "Réflexe à un bang fort",
+      "description": "Tu as sursauté en entendant un bang fort à proximité.",
+      "why": "Le cerveau reptilien déclenche une réaction de surprise immédiate face à une menace soudaine.",
+      "correctMain": "reptilian"
+    },
+    "what3": {
+      "title": "Émotion à l'écoute d'une chanson",
+      "description": "Une chanson a rappelé un souvenir et tu t'es senti ému.",
+      "why": "Le système limbique relie la mémoire et l'émotion.",
+      "correctMain": "limbic"
+    },
+    "what4": {
+      "title": "Contact inattendu",
+      "description": "Quelqu'un t'a touché l'épaule par derrière et tu as réagi avant de te retourner.",
+      "why": "L'un des trois systèmes cérébraux est principalement responsable de cette réaction."
+    },
+    "what5": {
+      "title": "Choisir quoi manger",
+      "description": "Tu étais devant le frigo en train de décider quoi manger.",
+      "why": "L'un des trois systèmes cérébraux est principalement responsable de cette réaction."
+    },
+    "what6": {
+      "title": "Réaction à un compliment",
+      "description": "Tu as ressenti un plaisir intense quand quelqu'un a complimenté ton travail.",
+      "why": "L'un des trois systèmes cérébraux est principalement responsable de cette réaction."
+    }
+  },
+  "situations": {
+    "ctrl1": {
+      "title": "Des pas la nuit",
+      "description": "Tu marches la nuit dans une rue déserte. Soudain tu entends des pas rapides derrière toi. Ton corps se tend, ton cœur s'accélère. Quelques secondes plus tard tu te retournes et tu comprends que c'est juste quelqu'un qui court pour le bus, et tu te calmes peu à peu.",
+      "why": "Le néocortex a réévalué la situation puis a apaisé le système limbique.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl2": {
+      "title": "Avant une présentation importante",
+      "description": "Avant une présentation importante tes paumes transpirent et ton pouls s'accélère. Tu le remarques et tu commences à respirer lentement et profondément en te concentrant sur le compte des inspirations. Peu à peu ton corps revient à la normale.",
+      "why": "Le néocortex a utilisé la respiration consciente pour réguler la réaction reptilienne au stress.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "reptilian"
+    },
+    "ctrl3": {
+      "title": "Commentaire agressif en ligne",
+      "description": "Tu lis un commentaire agressif sur internet. La colère monte en toi, tu veux répondre vivement tout de suite. Mais tu fermes l'onglet et tu décides d'y revenir plus tard.",
+      "why": "Le néocortex a surmonté l'impulsion limbique de réagir et a choisi de prendre du recul.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl4": {
+      "title": "Branche qui craque dans la forêt",
+      "description": "Une branche a craqué brusquement près de toi dans la forêt. Tu te figes instantanément. Une seconde plus tard l'anxiété apparaît et tu commences à imaginer que ça pourrait être un danger.",
+      "why": "Le cerveau reptilien a déclenché d'abord la réaction de figement, puis le système limbique a ajouté la peur.",
+      "correctAnswerQ1": "reptilian",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl5": {
+      "title": "Colère pendant une dispute",
+      "description": "Tu es très en colère pendant une dispute et à un moment tu remarques que tu n'écoutes plus les arguments et que tu n'arrives plus à formuler clairement tes pensées.",
+      "why": "Le système limbique était aux commandes et a submergé la capacité du néocortex à raisonner.",
+      "correctAnswerQ1": "limbic",
+      "correctAnswerQ2": "neocortex"
+    },
+    "ctrl6": {
+      "title": "Avant une prise de sang",
+      "description": "Avant une prise de sang tu te sens anxieux et ta respiration se dérègle. Tu te rappelles consciemment que c'est un acte sûr et que ce sera vite terminé.",
+      "why": "Le néocortex a utilisé la réassurance rationnelle pour calmer le système limbique.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl7": {
+      "title": "Klaxon de voiture",
+      "description": "Tu as entendu un coup de klaxon strident. Ton corps a sursauté, et un instant plus tard tu sens une vague d'irritation et tu te mets à insulter mentalement le conducteur.",
+      "why": "Le cerveau reptilien a déclenché d'abord le sursaut, puis le système limbique a ajouté l'irritation.",
+      "correctAnswerQ1": "reptilian",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl8": {
+      "title": "Peur de l'avion",
+      "description": "Tu es saisi par la peur de l'avion. Déjà dans l'avion tu commences à lire les statistiques de sécurité aérienne pour te calmer.",
+      "why": "Le néocortex a utilisé les faits pour réguler la réaction limbique de peur.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl9": {
+      "title": "Nerveux avant une rencontre",
+      "description": "Tu te sens très nerveux avant une rencontre. À cause de ça ton ventre commence à faire mal et tes muscles se tendent.",
+      "why": "Le système limbique a piloté l'état émotionnel et a influé sur la réaction corporelle reptilienne.",
+      "correctAnswerQ1": "limbic",
+      "correctAnswerQ2": "reptilian"
+    },
+    "ctrl10": {
+      "title": "Bruit étrange la nuit",
+      "description": "Tu t'es réveillé la nuit à cause d'un bruit étrange. Ton corps est déjà tendu. Quelques secondes plus tard tu commences à passer en revue logiquement les causes possibles du bruit.",
+      "why": "Le cerveau reptilien a réagi le premier, puis le néocortex a pris le relais pour analyser.",
+      "correctAnswerQ1": "reptilian",
+      "correctAnswerQ2": "neocortex"
+    },
+    "ctrl11": {
+      "title": "Blessé dans une conversation",
+      "description": "Quelque chose dans la conversation t'a blessé. Tu sens la rancœur monter en toi et tu te mets à parler plus vite et plus fort, sans choisir tes mots.",
+      "why": "Le système limbique a pris le dessus et a perturbé le contrôle du néocortex sur la parole.",
+      "correctAnswerQ1": "limbic",
+      "correctAnswerQ2": "neocortex"
+    },
+    "ctrl12": {
+      "title": "Respiration superficielle sous le stress",
+      "description": "Tu remarques que tu respires superficiellement à cause du stress. Tu égalises consciemment ta respiration et tu détends tes épaules.",
+      "why": "Le néocortex a utilisé une régulation volontaire pour apaiser la réaction reptilienne au stress.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "reptilian"
+    },
+    "ctrl13": {
+      "title": "Au bord d'une falaise",
+      "description": "Tu marches au bord d'une falaise. Ton corps ralentit automatiquement et devient très prudent. De là naît un sentiment anxieux de danger.",
+      "why": "Le cerveau reptilien a déclenché d'abord la prudence, puis le système limbique a ajouté l'anxiété.",
+      "correctAnswerQ1": "reptilian",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl14": {
+      "title": "Submergé après une nouvelle",
+      "description": "Tu es submergé d'émotions après une nouvelle. Tu t'assieds et tu commences à écrire tes pensées pour te reprendre.",
+      "why": "Le néocortex a utilisé l'écriture pour réguler et organiser l'état émotionnel limbique.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl15": {
+      "title": "Pendant un conflit",
+      "description": "Pendant un conflit tu sens ton visage « brûler » et ton cœur battre plus fort, et il devient difficile de raisonner calmement.",
+      "why": "Le système limbique était aux commandes et a gêné le néocortex pour penser clairement.",
+      "correctAnswerQ1": "limbic",
+      "correctAnswerQ2": "neocortex"
+    },
+    "ctrl16": {
+      "title": "Avant un examen",
+      "description": "Avant un examen tu imagines le pire scénario, et à cause de ça ton corps commence à réagir comme à une vraie menace.",
+      "why": "Le néocortex (en imaginant le scénario) a déclenché la réaction limbique et corporelle au stress.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl17": {
+      "title": "Tu as glissé brusquement",
+      "description": "Tu as glissé brusquement. Ton corps se rééquilibre instantanément, et c'est seulement après que la frayeur arrive.",
+      "why": "Le cerveau reptilien a géré l'équilibre d'abord, puis le système limbique a produit la peur.",
+      "correctAnswerQ1": "reptilian",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl18": {
+      "title": "Tu sens la panique",
+      "description": "Tu sens la panique, mais tu commences volontairement à compter les objets autour de toi pour reprendre le contrôle.",
+      "why": "Le néocortex a utilisé une technique de concentration pour calmer la panique limbique.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "limbic"
+    },
+    "ctrl19": {
+      "title": "Après un email désagréable",
+      "description": "Après un email désagréable tu sens la tension dans ton corps et ton cœur battre plus vite.",
+      "why": "Le système limbique a traité le bouleversement et a piloté la réaction corporelle reptilienne.",
+      "correctAnswerQ1": "limbic",
+      "correctAnswerQ2": "reptilian"
+    },
+    "ctrl20": {
+      "title": "Tu veux répliquer vivement",
+      "description": "Tu as très envie de répliquer vivement à quelqu'un, mais tu te forces à faire une pause et à choisir tes mots.",
+      "why": "Le néocortex a surmonté l'impulsion limbique et a choisi une réponse mesurée.",
+      "correctAnswerQ1": "neocortex",
+      "correctAnswerQ2": "limbic"
+    }
+  }
+}
