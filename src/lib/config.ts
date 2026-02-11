@@ -28,13 +28,13 @@ export const BRAIN_SYSTEMS = ["reptilian", "limbic", "neocortex"] as const;
 export type BrainSystem = (typeof BRAIN_SYSTEMS)[number];
 
 export const SYSTEM_COLORS: Record<BrainSystem, string> = {
-  reptilian: "#ef4444",  // red-500
-  limbic: "#f59e0b",     // amber-500
-  neocortex: "#3b82f6",  // blue-500
+  reptilian: "#F71212",  // vibrant red
+  limbic: "#E1E438",     // bright yellow
+  neocortex: "#03E7DF",  // bright turquoise
 };
 
 export const SYSTEM_BG_COLORS: Record<BrainSystem, string> = {
-  reptilian: "#fef2f2",  // red-50
-  limbic: "#fffbeb",     // amber-50
-  neocortex: "#eff6ff",  // blue-50
+  reptilian: "#fef2f2",  // light red
+  limbic: "#fefce8",     // light yellow
+  neocortex: "#ecfeff",  // light cyan
 };

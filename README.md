@@ -1,4 +1,15 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Thebrain
+
+A Next.js brain quiz game (static export for GitHub Pages).
+
+## Deploy on GitHub Pages
+
+**If the live site shows this README instead of the app**, the Pages source is wrong.
+
+1. In the repo: **Settings → Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions** (not “Deploy from a branch”).
+3. Push to `main` (or run the “Deploy to GitHub Pages” workflow manually). The workflow builds the app and deploys the `out/` folder.
+4. Open the app at: **`https://<your-username>.github.io/brain-game/`** (trailing slash and `/brain-game/` path matter).
 
 ## Getting Started
 
