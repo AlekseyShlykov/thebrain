@@ -79,9 +79,10 @@
     "voice": "Voix",
     "on": "Activé",
     "off": "Désactivé",
-    "myX": "X / Twitter",
+    "myX": "X",
     "myWebsite": "Site web",
-    "emailMe": "Écrivez-moi"
+    "supportMe": "Me soutenir",
+    "createdBy": "Créé par Alex Shlykov"
   },
   "situationsMain": {
     "main1": {

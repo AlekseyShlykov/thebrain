@@ -20,7 +20,7 @@ export const AUDIO = {
 export const LINKS = {
   xProfile: "https://x.com/buildtoundrstnd",
   website: "https://buildtounderstand.dev/",
-  email: "mailto:buildtounderstand@gmail.com",
+  patreon: "https://patreon.com/buildtounderstand",
   /** Russian: Know More / Go Deeper */
   goDeeperRu: "https://youtu.be/I50bZQcOEzI?si=6iky8mZzUzHv3jq1&t=2790",
   /** En, Fr and all other languages */

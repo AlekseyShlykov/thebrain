@@ -62,7 +62,14 @@ export default function Footer() {
       className="fixed bottom-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-t border-slate-700 overflow-x-hidden"
       role="contentinfo"
     >
-      <div className="max-w-5xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-y-2 gap-x-4 min-w-0 w-full">
+      <div className="max-w-5xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-y-2 gap-x-4 min-w-0 w-full relative">
+        {/* Center: credits — subtle, 50% opacity */}
+        <span
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xs text-slate-400 opacity-50 pointer-events-none hidden sm:inline"
+          aria-hidden
+        >
+          {strings.footer.createdBy}
+        </span>
         {/* Left: Audio toggles — dark segmented pill */}
         <div
           className="inline-flex rounded-xl bg-slate-800 p-1 border border-slate-700/80 shadow-inner flex-shrink-0 min-w-0"
@@ -113,10 +120,12 @@ export default function Footer() {
           </a>
           <span className="text-slate-600 hidden sm:inline">|</span>
           <a
-            href={LINKS.email}
+            href={LINKS.patreon}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden sm:inline hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded"
           >
-            {strings.footer.emailMe}
+            {strings.footer.supportMe}
           </a>
         </div>
       </div>

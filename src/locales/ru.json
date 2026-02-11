@@ -63,11 +63,11 @@
     "reptilian": "Рептильный мозг",
     "limbic": "Лимбическая система",
     "neocortex": "Неокортекс",
-    "topDriver": "Вы лучше всего распознаете действия, инициируемые {system}",
+    "topDriver": "Вы лучше всего распознаете действия, которые инициирует {system}",
     "goDeeper": "Узнать больше",
     "tryAgain": "Попробовать снова",
     "shareTitle": "Мои результаты {gameName}",
-    "shareMessage": "Я набрал(а) {correct}/{total} в тесте {gameName}! Я лучше всего распознаю действия, инициируемые {system}.",
+    "shareMessage": "Мой результат {correct}/{total} в тесте {gameName}! Я лучше всего распознаю действия, которые инициирует {system}.",
     "shareOnTwitter": "Поделиться в X",
     "shareOnInstagram": "Поделиться в Instagram",
     "shareOnLinkedIn": "Поделиться в LinkedIn",
@@ -79,9 +79,10 @@
     "voice": "Голос",
     "on": "Вкл",
     "off": "Выкл",
-    "myX": "X / Twitter",
+    "myX": "X",
     "myWebsite": "Сайт",
-    "emailMe": "Написать мне"
+    "supportMe": "Поддержать меня",
+    "createdBy": "Создано Alex Shlykov"
   },
   "situationsMain": {
     "main1": {

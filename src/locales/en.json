@@ -7,7 +7,7 @@
     "languageSwitcher": "Language"
   },
   "landing": {
-    "title": "How the Brain Shapes Behavior",
+    "title": "How the Brain Shapes Behaviour",
     "subtitle": "Recognize which neural system is active in different real-life situations.",
     "description": "Your brain has three major systems — each one evolved at a different time and handles different jobs. Take this quick quiz to discover which driver is behind the wheel in everyday situations.",
     "cta": "Start the Journey"
@@ -79,9 +79,10 @@
     "voice": "Voice",
     "on": "On",
     "off": "Off",
-    "myX": "X / Twitter",
+    "myX": "X",
     "myWebsite": "Website",
-    "emailMe": "Email me"
+    "supportMe": "Support me",
+    "createdBy": "Created by Alex Shlykov"
   },
   "situationsMain": {
     "main1": {
