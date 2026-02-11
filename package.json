@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "npx serve out",
     "lint": "eslint",
-    "generate-pngs": "node scripts/generate-pngs.mjs"
+    "generate-pngs": "node scripts/generate-pngs.mjs",
+    "generate-og-image": "node scripts/generate-og-image.mjs"
   },
   "dependencies": {
     "next": "16.1.6",

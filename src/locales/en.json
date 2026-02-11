@@ -1,14 +1,14 @@
 {
   "app": {
-    "title": "The Brain",
-    "description": "Discover which part of your brain takes the wheel in everyday situations. A short interactive quiz about your reptilian brain, limbic system, and neocortex."
+    "title": "How the Brain Shapes Behavior",
+    "description": "Recognize which neural system is active in different real-life situations."
   },
   "nav": {
     "languageSwitcher": "Language"
   },
   "landing": {
-    "title": "Brain Driver",
-    "subtitle": "Who's really in charge up there?",
+    "title": "How the Brain Shapes Behavior",
+    "subtitle": "Recognize which neural system is active in different real-life situations.",
     "description": "Your brain has three major systems — each one evolved at a different time and handles different jobs. Take this quick quiz to discover which driver is behind the wheel in everyday situations.",
     "cta": "Start the Journey"
   },
@@ -64,12 +64,13 @@
     "limbic": "Limbic System",
     "neocortex": "Neocortex",
     "topDriver": "Your Top Brain Driver: {system}",
-    "shareResults": "Share Results",
     "goDeeper": "Go Deeper",
     "tryAgain": "Try Again",
-    "downloadImage": "Download Image",
-    "shareTitle": "My Brain Driver Results",
-    "shareText": "I scored {correct}/{total} on the Brain Driver quiz! My top brain driver is {system}.",
+    "shareTitle": "My {gameName} Results",
+    "shareMessage": "I scored {correct}/{total} on the {gameName} quiz! My top brain driver is {system}.",
+    "shareOnTwitter": "Share on X",
+    "shareOnInstagram": "Share on Instagram",
+    "shareOnLinkedIn": "Share on LinkedIn",
     "correctLabel": "{count} correct"
   },
   "footer": {

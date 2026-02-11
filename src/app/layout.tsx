@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Providers from "./Providers";
+import { SITE_URL } from "@/lib/config";
+import enStrings from "@/locales/en.json";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,10 +15,41 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+/** Default metadata from English locale (app.title / app.description used for OG & Twitter). */
+const title = enStrings.app.title;
+const description = enStrings.app.description;
+const ogImagePath = "/images/og-image.png";
+const ogImageAlt = `${enStrings.app.title} — ${enStrings.app.description}`;
+
 export const metadata: Metadata = {
-  title: "Brain Driver — Who's Really in Charge?",
-  description:
-    "An interactive quiz about your reptilian brain, limbic system, and neocortex. Discover which part of your brain drives your everyday decisions.",
+  metadataBase: new URL(SITE_URL),
+  title,
+  description,
+  openGraph: {
+    type: "website",
+    title,
+    description,
+    siteName: enStrings.app.title,
+    images: [
+      {
+        url: ogImagePath,
+        width: 1200,
+        height: 630,
+        alt: ogImageAlt,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [ogImagePath],
+    imageAlt: ogImageAlt,
+  },
+  icons: {
+    // Favicon from public/favicon.png (served at /favicon.png)
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

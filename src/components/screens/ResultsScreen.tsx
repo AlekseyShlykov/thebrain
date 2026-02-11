@@ -3,11 +3,12 @@
 import { useEffect, useRef, useCallback, useState } from "react";
 import { useLocale } from "@/context/LocaleContext";
 import { useGame } from "@/context/GameContext";
-import { SYSTEM_COLORS, LINKS, type BrainSystem } from "@/lib/config";
+import { SYSTEM_COLORS, LINKS, SITE_URL, type BrainSystem, type SupportedLanguage } from "@/lib/config";
 
 function generateShareImage(
   canvas: HTMLCanvasElement,
   data: {
+    gameName: string;
     topSystem: string;
     totalCorrect: number;
     totalQuestions: number;
@@ -33,11 +34,11 @@ function generateShareImage(
   ctx.fillStyle = topColor;
   ctx.fillRect(0, 0, w, 6);
 
-  // Title
+  // Title (localized game name)
   ctx.fillStyle = "#111827";
   ctx.font = "bold 28px system-ui, -apple-system, sans-serif";
   ctx.textAlign = "center";
-  ctx.fillText("Brain Driver", w / 2, 50);
+  ctx.fillText(data.gameName, w / 2, 50);
 
   // Top driver
   ctx.fillStyle = "#6b7280";
@@ -58,15 +59,15 @@ function generateShareImage(
   ctx.textAlign = "center";
   ctx.fillText(`${data.totalCorrect}/${data.totalQuestions}`, w / 2, 170);
 
-  // Breakdown
+  // Breakdown — bars at least half width, centered, clearly visible
   const systems = ["reptilian", "limbic", "neocortex"];
-  const barY = 240;
-  const barHeight = 24;
-  const barMaxWidth = 140;
-  const startX = 80;
+  const barY = 235;
+  const barHeight = 28;
+  const barMaxWidth = 300; // half of canvas width
+  const startX = (w - barMaxWidth) / 2; // center bars
 
   systems.forEach((sys, i) => {
-    const y = barY + i * 44;
+    const y = barY + i * 48;
     const bd = data.breakdown[sys] || { correct: 0, total: 0 };
     const color = SYSTEM_COLORS[sys as BrainSystem];
     const label = data.systemLabels[sys] || sys;
@@ -99,17 +100,27 @@ function generateShareImage(
     ctx.fillText(`${bd.correct}/${bd.total}`, startX + barMaxWidth + 12, y + 17);
   });
 
-  // Footer
+  // Footer — same site as in footer links (LINKS.website)
+  const footerLabel = (() => {
+    try {
+      return new URL(LINKS.website).hostname;
+    } catch {
+      return LINKS.website;
+    }
+  })();
   ctx.fillStyle = "#f3f4f6";
   ctx.fillRect(0, h - 30, w, 30);
   ctx.fillStyle = "#9ca3af";
   ctx.font = "11px system-ui, -apple-system, sans-serif";
   ctx.textAlign = "center";
-  ctx.fillText("braindrivergame.com", w / 2, h - 10);
+  ctx.fillText(footerLabel, w / 2, h - 10);
 }
 
+const goDeeperUrl = (lang: SupportedLanguage) =>
+  lang === "ru" ? LINKS.goDeeperRu : LINKS.goDeeperEn;
+
 export default function ResultsScreen() {
-  const { strings, t } = useLocale();
+  const { strings, t, language } = useLocale();
   const { results, loadResults, restartGame, playClick } = useGame();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [imageDataUrl, setImageDataUrl] = useState<string | null>(null);
@@ -124,6 +135,7 @@ export default function ResultsScreen() {
         strings.results[results.topSystem as keyof typeof strings.results] || results.topSystem;
 
       generateShareImage(canvasRef.current, {
+        gameName: strings.landing.title,
         topSystem: results.topSystem,
         totalCorrect: results.totalCorrect,
         totalQuestions: results.totalQuestions,
@@ -139,50 +151,52 @@ export default function ResultsScreen() {
     }
   }, [results, strings, t]);
 
-  const handleDownloadImage = useCallback(() => {
+  const systemLabel =
+    results
+      ? strings.results[results.topSystem as keyof typeof strings.results] || results.topSystem
+      : "";
+
+  const shareMessage = results
+    ? t(strings.results.shareMessage, {
+        correct: results.totalCorrect,
+        total: results.totalQuestions,
+        system: systemLabel,
+        gameName: strings.landing.title,
+      })
+    : "";
+
+  const handleShareTwitter = useCallback(() => {
+    const url = typeof window !== "undefined" ? window.location.href : SITE_URL;
+    const text = encodeURIComponent(shareMessage);
+    const urlParam = encodeURIComponent(url);
+    window.open(
+      `https://twitter.com/intent/tweet?text=${text}&url=${urlParam}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  }, [shareMessage]);
+
+  const handleShareInstagram = useCallback(() => {
     if (!imageDataUrl) return;
     const link = document.createElement("a");
     link.download = "brain-driver-results.png";
     link.href = imageDataUrl;
     link.click();
-  }, [imageDataUrl]);
-
-  const handleShare = useCallback(async () => {
-    if (!results) return;
-
-    const systemLabel =
-      strings.results[results.topSystem as keyof typeof strings.results] || results.topSystem;
-    const text = t(strings.results.shareText, {
-      correct: results.totalCorrect,
-      total: results.totalQuestions,
-      system: systemLabel,
-    });
-
-    if (navigator.share && canvasRef.current) {
-      try {
-        const blob = await new Promise<Blob | null>((resolve) =>
-          canvasRef.current!.toBlob(resolve, "image/png")
-        );
-        const files = blob ? [new File([blob], "brain-driver.png", { type: "image/png" })] : [];
-
-        await navigator.share({
-          title: strings.results.shareTitle,
-          text,
-          ...(files.length > 0 && navigator.canShare?.({ files }) ? { files } : {}),
-        });
-        return;
-      } catch {
-        // User cancelled or API error — fall through to clipboard
-      }
-    }
-
-    // Fallback: copy to clipboard
     try {
-      await navigator.clipboard.writeText(text);
+      navigator.clipboard.writeText(shareMessage);
     } catch {
       // Ignore clipboard failures
     }
-  }, [results, strings, t]);
+  }, [imageDataUrl, shareMessage]);
+
+  const handleShareLinkedIn = useCallback(() => {
+    const url = encodeURIComponent(typeof window !== "undefined" ? window.location.href : SITE_URL);
+    window.open(
+      `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  }, []);
 
   if (!results) {
     return (
@@ -192,8 +206,6 @@ export default function ResultsScreen() {
     );
   }
 
-  const topSystemLabel =
-    strings.results[results.topSystem as keyof typeof strings.results] || results.topSystem;
   const topSystemColor = SYSTEM_COLORS[results.topSystem as BrainSystem] || "#3b82f6";
 
   return (
@@ -208,7 +220,7 @@ export default function ResultsScreen() {
           className="mx-auto mt-4 mb-8 px-5 py-2.5 rounded-full text-center font-semibold text-sm inline-flex justify-center w-full"
           style={{ backgroundColor: topSystemColor + "18", color: topSystemColor }}
         >
-          {t(strings.results.topDriver, { system: topSystemLabel })}
+          {t(strings.results.topDriver, { system: systemLabel })}
         </div>
 
         {/* Score circle */}
@@ -274,43 +286,62 @@ export default function ResultsScreen() {
           </div>
         )}
 
-        {/* Action buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 mb-4">
+        {/* Share buttons — Twitter, Instagram, LinkedIn */}
+        <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-4">
           <button
+            type="button"
             onClick={() => {
               playClick();
-              handleShare();
+              handleShareTwitter();
             }}
             className="
-              flex-1 px-6 py-3 rounded-full font-semibold text-sm
-              bg-gray-900 text-white shadow-lg shadow-gray-900/20
+              px-3 py-3 sm:px-4 rounded-full font-semibold text-xs sm:text-sm
+              bg-gray-900 text-white
               hover:bg-gray-800 active:scale-[0.98]
               transition-all duration-200
               focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2
             "
           >
-            {strings.results.shareResults}
+            {strings.results.shareOnTwitter}
           </button>
           <button
+            type="button"
             onClick={() => {
               playClick();
-              handleDownloadImage();
+              handleShareInstagram();
             }}
             className="
-              flex-1 px-6 py-3 rounded-full font-semibold text-sm
+              px-3 py-3 sm:px-4 rounded-full font-semibold text-xs sm:text-sm
               border-2 border-gray-200 text-gray-700
               hover:bg-gray-50 active:scale-[0.98]
               transition-all duration-200
               focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2
             "
           >
-            {strings.results.downloadImage}
+            {strings.results.shareOnInstagram}
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              playClick();
+              handleShareLinkedIn();
+            }}
+            className="
+              px-3 py-3 sm:px-4 rounded-full font-semibold text-xs sm:text-sm
+              border-2 border-gray-200 text-gray-700
+              hover:bg-gray-50 active:scale-[0.98]
+              transition-all duration-200
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2
+            "
+          >
+            {strings.results.shareOnLinkedIn}
           </button>
         </div>
 
+        {/* Go deeper + Try again */}
         <div className="flex flex-col sm:flex-row gap-3 pb-20">
           <a
-            href={LINKS.goDeeper}
+            href={goDeeperUrl(language)}
             target="_blank"
             rel="noopener noreferrer"
             className="

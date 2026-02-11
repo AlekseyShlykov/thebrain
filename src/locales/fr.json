@@ -64,12 +64,13 @@
     "limbic": "Système limbique",
     "neocortex": "Néocortex",
     "topDriver": "Votre pilote cérébral principal : {system}",
-    "shareResults": "Partager les résultats",
     "goDeeper": "Aller plus loin",
     "tryAgain": "Réessayer",
-    "downloadImage": "Télécharger l'image",
-    "shareTitle": "Mes résultats Brain Driver",
-    "shareText": "J'ai obtenu {correct}/{total} au quiz Brain Driver ! Mon pilote cérébral principal est {system}.",
+    "shareTitle": "Mes résultats {gameName}",
+    "shareMessage": "J'ai obtenu {correct}/{total} au quiz {gameName} ! Mon pilote cérébral principal est {system}.",
+    "shareOnTwitter": "Partager sur X",
+    "shareOnInstagram": "Partager sur Instagram",
+    "shareOnLinkedIn": "Partager sur LinkedIn",
     "correctLabel": "{count} correct(s)"
   },
   "footer": {

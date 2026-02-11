@@ -2,6 +2,11 @@
 
 export const SITE_TITLE = "Brain Driver";
 
+/** Full site URL for canonical and OG links (set NEXT_PUBLIC_SITE_URL at build if different). */
+export const SITE_URL =
+  (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_SITE_URL) ||
+  "https://buildtounderstand.dev";
+
 /** Base path for GitHub Pages (set via NEXT_PUBLIC_BASE_PATH env var at build time). */
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -16,7 +21,10 @@ export const LINKS = {
   xProfile: "https://x.com/buildtoundrstnd",
   website: "https://buildtounderstand.dev/",
   email: "mailto:buildtounderstand@gmail.com",
-  goDeeper: "https://en.wikipedia.org/wiki/Triune_brain",
+  /** Russian: Know More / Go Deeper */
+  goDeeperRu: "https://youtu.be/I50bZQcOEzI?si=6iky8mZzUzHv3jq1&t=2790",
+  /** En, Fr and all other languages */
+  goDeeperEn: "https://youtu.be/fzUXcBTQXKM?si=U6WNCtccUVrxhkql&t=2842",
 } as const;
 
 export const SUPPORTED_LANGUAGES = ["en", "fr", "ru"] as const;

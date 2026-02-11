@@ -84,28 +84,54 @@ function getOrCreateSessionId(): string {
 }
 
 /** Compute results from in-memory answers (no server needed). */
+/** Stage 2: each correct answer (who controls OR who is controlled) counts as 1 point; max 18 (6 + 6×2). */
 function computeResults(answers: QuizAnswer[]) {
-  const totalQuestions = answers.length;
   const breakdown: Record<string, { correct: number; total: number }> = {
     reptilian: { correct: 0, total: 0 },
     limbic: { correct: 0, total: 0 },
     neocortex: { correct: 0, total: 0 },
   };
 
+  let totalCorrect = 0;
+  let totalPossiblePoints = 0;
+
   for (const d of answers) {
-    const key = d.q1Answer as string;
-    if (breakdown[key]) {
-      breakdown[key].total++;
-      if (d.isCorrectQ1 && d.isCorrectQ2) breakdown[key].correct++;
+    const isStage2 = d.questionId.startsWith("stage2-");
+    const pointsThisQuestion = isStage2 ? 2 : 1;
+    totalPossiblePoints += pointsThisQuestion;
+
+    if (isStage2) {
+      // Stage 2: count each correct answer separately (controller + controlled)
+      if (breakdown[d.q1Answer]) {
+        breakdown[d.q1Answer].total++;
+        if (d.isCorrectQ1) {
+          breakdown[d.q1Answer].correct++;
+          totalCorrect++;
+        }
+      }
+      if (breakdown[d.q2Answer]) {
+        breakdown[d.q2Answer].total++;
+        if (d.isCorrectQ2) {
+          breakdown[d.q2Answer].correct++;
+          totalCorrect++;
+        }
+      }
+    } else {
+      // Stage 1: one point per question
+      if (breakdown[d.q1Answer]) {
+        breakdown[d.q1Answer].total++;
+        if (d.isCorrectQ1) {
+          breakdown[d.q1Answer].correct++;
+          totalCorrect++;
+        }
+      }
     }
   }
-
-  const totalCorrect = answers.filter((d) => d.isCorrectQ1 && d.isCorrectQ2).length;
 
   const topSystem =
     Object.entries(breakdown).sort((a, b) => b[1].correct - a[1].correct)[0]?.[0] ?? "neocortex";
 
-  return { totalQuestions, totalCorrect, breakdown, topSystem };
+  return { totalQuestions: totalPossiblePoints, totalCorrect, breakdown, topSystem };
 }
 
 export function GameProvider({ children }: { children: React.ReactNode }) {
