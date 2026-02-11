@@ -1,6 +1,6 @@
-# The Choice: Moral Dilemma Game
+# How the Brain Shapes Behavior
 
-**The Choice** is an interactive narrative game exploring core moral philosophies through a series of dilemmas. Make decisions, reflect on your values, and discover which ethical theories resonate most with your worldview.
+**How the Brain Shapes Behavior** is an educational quiz which teaches users to recognize which brain system is active in different life situations. 
 
 ## Built With
 [Cursor](https://cursor.com/)
