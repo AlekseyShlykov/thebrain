@@ -43,7 +43,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: [ogImagePath],
+    images: [
+      {
+        url: ogImagePath,
+        width: 1200,
+        height: 630,
+        alt: ogImageAlt,
+      },
+    ],
   },
   icons: {
     // Favicon from public/favicon.png (basePath applied for GitHub Pages)
