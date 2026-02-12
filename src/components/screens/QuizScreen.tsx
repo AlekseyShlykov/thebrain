@@ -6,6 +6,7 @@ import { useGame } from "@/context/GameContext";
 import { BRAIN_SYSTEMS, type BrainSystem, SYSTEM_COLORS } from "@/lib/config";
 import { isStage1, isStage2, type Stage1Question, type Stage2Question } from "@/lib/questions";
 import { VectorBrainDiagram } from "@/components/VectorBrainDiagram";
+import { trackFunnelEvent, ANALYTICS_EVENTS } from "@/lib/analytics";
 
 type SituationStrings = {
   title: string;
@@ -67,6 +68,9 @@ export default function QuizScreen() {
   const handleSubmitAnswer = useCallback(async () => {
     if (isStage1(question)) {
       if (!q1 || effectiveCorrectMain === undefined) return;
+      if (currentQuestionIndex === 0) {
+        trackFunnelEvent(ANALYTICS_EVENTS.FIRST_QUESTION_CHOICE_STAGE1);
+      }
       const correct = q1 === effectiveCorrectMain;
       setIsCorrectQ1(correct);
       setIsCorrectQ2(true);
@@ -93,7 +97,7 @@ export default function QuizScreen() {
         isCorrectQ2: correctQ2,
       });
     }
-  }, [q1, q2, question, submitAnswer, effectiveCorrectMain, effectiveCorrectQ1, effectiveCorrectQ2]);
+  }, [q1, q2, question, currentQuestionIndex, submitAnswer, effectiveCorrectMain, effectiveCorrectQ1, effectiveCorrectQ2]);
 
   const handleNext = useCallback(() => {
     setQ1(null);

@@ -3,6 +3,7 @@
 import { useLocale } from "@/context/LocaleContext";
 import { useGame } from "@/context/GameContext";
 import { VectorBrainDiagram } from "@/components/VectorBrainDiagram";
+import { trackFunnelEvent, ANALYTICS_EVENTS } from "@/lib/analytics";
 
 export default function LandingScreen() {
   const { strings } = useLocale();
@@ -38,6 +39,7 @@ export default function LandingScreen() {
       <button
         onClick={() => {
           playClick();
+          trackFunnelEvent(ANALYTICS_EVENTS.INTRO_BUTTON_CLICK);
           startGame();
         }}
         className="

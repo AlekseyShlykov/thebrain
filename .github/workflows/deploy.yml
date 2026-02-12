@@ -35,6 +35,8 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
           # Origin for OG/Twitter image URLs (use NEXT_PUBLIC_SITE_URL for custom domain)
           NEXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io
+          # Google Sheets funnel analytics (Apps Script web app)
+          NEXT_PUBLIC_ANALYTICS_SHEETS_SCRIPT_URL: https://script.google.com/macros/s/AKfycbxsyXMwRbLki-ShMh19erXmyaUI8ZjIzjFMCYMwNMLYgWoz64VBPZh_biOOBavDlhUvOQ/exec
         run: npm run build
 
       - name: Add .nojekyll

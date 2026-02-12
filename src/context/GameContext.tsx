@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import type { BrainSystem } from "@/lib/config";
 import { AUDIO } from "@/lib/config";
 import { buildQuestionPool, type Question } from "@/lib/questions";
+import { trackFunnelEvent, ANALYTICS_EVENTS } from "@/lib/analytics";
 
 /* ──────────────── Types ──────────────── */
 
@@ -181,11 +182,13 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
   const nextQuestion = useCallback(() => {
     // After 6th question (index 5), show Stage 2 intro before 7th question
     if (currentQuestionIndex === 5 && questions.length > 6) {
+      trackFunnelEvent(ANALYTICS_EVENTS.STAGE_1_ENDED);
       setCurrentQuestionIndex(6);
       setScreen("stage2-intro");
     } else if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((i) => i + 1);
     } else {
+      trackFunnelEvent(ANALYTICS_EVENTS.STAGE_2_ENDED);
       setScreen("results");
     }
   }, [currentQuestionIndex, questions.length]);
