@@ -6,6 +6,7 @@ import type { BrainSystem } from "@/lib/config";
 import { AUDIO } from "@/lib/config";
 import { buildQuestionPool, type Question } from "@/lib/questions";
 import { trackFunnelEvent, ANALYTICS_EVENTS } from "@/lib/analytics";
+import { useLocale } from "@/context/LocaleContext";
 
 /* ──────────────── Types ──────────────── */
 
@@ -136,6 +137,7 @@ function computeResults(answers: QuizAnswer[]) {
 }
 
 export function GameProvider({ children }: { children: React.ReactNode }) {
+  const { language } = useLocale();
   const [screen, setScreen] = useState<GameScreen>("landing");
   const [sessionId, setSessionId] = useState<string>("");
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -182,16 +184,24 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
   const nextQuestion = useCallback(() => {
     // After 6th question (index 5), show Stage 2 intro before 7th question
     if (currentQuestionIndex === 5 && questions.length > 6) {
-      trackFunnelEvent(ANALYTICS_EVENTS.STAGE_1_ENDED);
+      trackFunnelEvent(ANALYTICS_EVENTS.STAGE_1_ENDED, { language });
       setCurrentQuestionIndex(6);
       setScreen("stage2-intro");
     } else if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((i) => i + 1);
     } else {
-      trackFunnelEvent(ANALYTICS_EVENTS.STAGE_2_ENDED);
+      const results = computeResults(answers);
+      trackFunnelEvent(ANALYTICS_EVENTS.STAGE_2_ENDED, {
+        language,
+        results: {
+          totalCorrect: results.totalCorrect,
+          totalQuestions: results.totalQuestions,
+          breakdown: results.breakdown,
+        },
+      });
       setScreen("results");
     }
-  }, [currentQuestionIndex, questions.length]);
+  }, [currentQuestionIndex, questions.length, answers, language]);
 
   const restartGame = useCallback(() => {
     // New session for restart

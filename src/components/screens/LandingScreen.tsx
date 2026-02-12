@@ -6,7 +6,7 @@ import { VectorBrainDiagram } from "@/components/VectorBrainDiagram";
 import { trackFunnelEvent, ANALYTICS_EVENTS } from "@/lib/analytics";
 
 export default function LandingScreen() {
-  const { strings } = useLocale();
+  const { strings, language } = useLocale();
   const { startGame, playClick } = useGame();
 
   return (
@@ -39,7 +39,7 @@ export default function LandingScreen() {
       <button
         onClick={() => {
           playClick();
-          trackFunnelEvent(ANALYTICS_EVENTS.INTRO_BUTTON_CLICK);
+          trackFunnelEvent(ANALYTICS_EVENTS.INTRO_BUTTON_CLICK, { language });
           startGame();
         }}
         className="

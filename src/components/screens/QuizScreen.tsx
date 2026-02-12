@@ -21,7 +21,7 @@ const DIAGRAM_SCALE_UP = 1.18;
 const DIAGRAM_SCALE_DOWN = 0.85;
 
 export default function QuizScreen() {
-  const { strings, t } = useLocale();
+  const { strings, t, language } = useLocale();
   const { questions, currentQuestionIndex, submitAnswer, nextQuestion, answers, playClick } = useGame();
 
   const [q1, setQ1] = useState<BrainSystem | null>(null);
@@ -69,7 +69,7 @@ export default function QuizScreen() {
     if (isStage1(question)) {
       if (!q1 || effectiveCorrectMain === undefined) return;
       if (currentQuestionIndex === 0) {
-        trackFunnelEvent(ANALYTICS_EVENTS.FIRST_QUESTION_CHOICE_STAGE1);
+        trackFunnelEvent(ANALYTICS_EVENTS.FIRST_QUESTION_CHOICE_STAGE1, { language });
       }
       const correct = q1 === effectiveCorrectMain;
       setIsCorrectQ1(correct);
