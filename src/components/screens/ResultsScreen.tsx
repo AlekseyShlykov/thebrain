@@ -176,19 +176,6 @@ export default function ResultsScreen() {
     );
   }, [shareMessage]);
 
-  const handleShareInstagram = useCallback(() => {
-    if (!imageDataUrl) return;
-    const link = document.createElement("a");
-    link.download = "brain-driver-results.png";
-    link.href = imageDataUrl;
-    link.click();
-    try {
-      navigator.clipboard.writeText(shareMessage);
-    } catch {
-      // Ignore clipboard failures
-    }
-  }, [imageDataUrl, shareMessage]);
-
   const handleShareLinkedIn = useCallback(() => {
     const url = encodeURIComponent(typeof window !== "undefined" ? window.location.href : SITE_URL);
     window.open(
@@ -286,8 +273,8 @@ export default function ResultsScreen() {
           </div>
         )}
 
-        {/* Share buttons — Twitter, Instagram, LinkedIn */}
-        <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-4">
+        {/* Share buttons — Twitter, LinkedIn */}
+        <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-4">
           <button
             type="button"
             onClick={() => {
@@ -303,22 +290,6 @@ export default function ResultsScreen() {
             "
           >
             {strings.results.shareOnTwitter}
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              playClick();
-              handleShareInstagram();
-            }}
-            className="
-              px-3 py-3 sm:px-4 rounded-full font-semibold text-xs sm:text-sm
-              border-2 border-gray-200 text-gray-700
-              hover:bg-gray-50 active:scale-[0.98]
-              transition-all duration-200
-              focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2
-            "
-          >
-            {strings.results.shareOnInstagram}
           </button>
           <button
             type="button"
