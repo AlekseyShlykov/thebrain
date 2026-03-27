@@ -1,0 +1,39 @@
+# How the Brain Shapes Behavior
+
+> An interactive educational quiz that teaches users to recognize which brain system is active in different life situations.
+
+## About
+
+Brain Driver is a web-based educational experience built around Paul MacLean's triune brain model. Users learn about three main brain systems and take an interactive quiz to test their understanding of which system drives specific behavioral responses.
+
+The experience includes:
+- Educational scrolly-telling introduction to each brain system
+- Interactive quiz with real-life scenarios
+- Personalized results with breakdown by brain system
+- Available in English, French, and Russian
+
+## Key Concepts
+
+- **Reptilian Brain**: The oldest part of the brain, present in reptiles. Handles automatic reactions, reflexes, and survival responses (e.g., flinching, pulling away from heat, restoring balance).
+- **Limbic System**: Evolved in mammals. The center of emotions — fear, anger, joy, social bonding, jealousy, and anxiety.
+- **Neocortex**: The newest addition, unique to higher primates. Handles perception, memory, thinking, rational analysis, planning, and language.
+
+## Links
+
+- Website: https://buildtounderstand.dev
+- X / Twitter: https://x.com/buildtoundrstnd
+- Patreon: https://patreon.com/buildtounderstand
+
+## Sources
+
+- Robert Sapolsky: The Biology and Psychology of Depression (https://www.youtube.com/watch?v=fzUXcBTQXKM&t=2845s)
+- Triune Brain — Wikipedia (https://en.wikipedia.org/wiki/Triune_brain)
+- Triune Brain — ScienceDirect (https://www.sciencedirect.com/topics/neuroscience/triune-brain)
+
+## Creator
+
+Created by Alex Shlykov.
+
+## License
+
+Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (https://creativecommons.org/licenses/by-nc-sa/4.0/).

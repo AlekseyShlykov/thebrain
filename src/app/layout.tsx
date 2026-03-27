@@ -24,15 +24,26 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const ogImagePath = `${basePath}/images/og-image.png`;
 const ogImageAlt = `${enStrings.app.title} — ${enStrings.app.description}`;
 
+const canonicalUrl = `${SITE_URL}${basePath}`;
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title,
   description,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+  alternates: {
+    canonical: canonicalUrl,
+  },
   openGraph: {
     type: "website",
     title,
     description,
     siteName: enStrings.app.title,
+    url: canonicalUrl,
     images: [
       {
         url: ogImagePath,
@@ -56,9 +67,22 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    // Favicon from public/favicon.png (basePath applied for GitHub Pages)
     icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/favicon.png`,
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: title,
+  description,
+  url: canonicalUrl,
+  applicationCategory: "EducationalApplication",
+  operatingSystem: "Any",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  author: { "@type": "Person", name: "Alex Shlykov" },
+  inLanguage: ["en", "fr", "ru"],
+  image: `${SITE_URL}${ogImagePath}`,
 };
 
 export default function RootLayout({
@@ -72,6 +96,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-BQFLM76JC6"
           strategy="afterInteractive"
