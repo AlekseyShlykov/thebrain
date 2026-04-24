@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && node scripts/generate-seo.mjs",
+    "build:itch": "ITCH_HTML_EXPORT=1 next build && node scripts/generate-seo.mjs && node scripts/sync-itch-build.mjs",
     "start": "npx serve out",
     "lint": "eslint",
     "generate-pngs": "node scripts/generate-pngs.mjs",

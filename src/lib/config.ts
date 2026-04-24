@@ -7,14 +7,11 @@ export const SITE_URL =
   (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_SITE_URL) ||
   "https://buildtounderstand.dev";
 
-/** Base path for GitHub Pages (set via NEXT_PUBLIC_BASE_PATH env var at build time). */
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
-
-/** Audio file paths (public URL). Replace music.mp3 with your background track. */
+/** Audio paths are relative so static export works from any host path, itch.io, and file://. */
 export const AUDIO = {
-  music: `${BASE_PATH}/audio/music.mp3`,
+  music: "./audio/music.mp3",
   /** Click SFX (public/audio/click.mp3). */
-  click: `${BASE_PATH}/audio/click.mp3`,
+  click: "./audio/click.mp3",
 } as const;
 
 export const LINKS = {

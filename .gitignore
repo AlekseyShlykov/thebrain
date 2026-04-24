@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# itch.io upload folder (sync-itch-build.mjs copy of out/; do not commit)
+/itch-build/
+
 # production
 /build
 
