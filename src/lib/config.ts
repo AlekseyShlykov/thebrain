@@ -19,7 +19,7 @@ export const LINKS = {
   website: "https://buildtounderstand.dev/",
   patreon: "https://patreon.com/buildtounderstand",
   /** Russian: Know More / Go Deeper */
-  goDeeperRu: "https://youtu.be/I50bZQcOEzI?si=6iky8mZzUzHv3jq1&t=2790",
+  goDeeperRu: "https://youtu.be/u2sz_E5GAas?si=vPh24Q7tv247IoSY&t=2790",
   /** En, Fr and all other languages */
   goDeeperEn: "https://youtu.be/fzUXcBTQXKM?si=U6WNCtccUVrxhkql&t=2842",
 } as const;
